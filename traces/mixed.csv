@@ -1,0 +1,8 @@
+# mixed: four CPU-burners + one latency-sensitive wakeup.
+# columns: name, arrival_ms, burst_ms, nice, latency_nice
+name,arrival_ms,burst_ms,nice,latency_nice
+burner_0,0.0,120.0,0,0
+burner_1,0.0,120.0,0,0
+burner_2,0.0,120.0,0,0
+burner_3,0.0,120.0,0,0
+interactive,50.0,1.0,0,-10

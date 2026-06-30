@@ -1,0 +1,27 @@
+# latency_nice: CPU burners + many wakeups at varying latency_nice values.
+# Multiple arrivals per latency_nice level, so we can compute mean wait.
+# CFS ignores latency_nice entirely; EEVDF makes it a knob on wake-up latency.
+name,arrival_ms,burst_ms,nice,latency_nice
+burner_0,0.0,400.0,0,0
+burner_1,0.0,400.0,0,0
+burner_2,0.0,400.0,0,0
+wake_ln_plus10_a,15.0,0.5,0,10
+wake_ln_plus10_b,35.0,0.5,0,10
+wake_ln_plus10_c,55.0,0.5,0,10
+wake_ln_plus10_d,75.0,0.5,0,10
+wake_ln_plus10_e,95.0,0.5,0,10
+wake_ln_0_a,115.0,0.5,0,0
+wake_ln_0_b,135.0,0.5,0,0
+wake_ln_0_c,155.0,0.5,0,0
+wake_ln_0_d,175.0,0.5,0,0
+wake_ln_0_e,195.0,0.5,0,0
+wake_ln_minus10_a,215.0,0.5,0,-10
+wake_ln_minus10_b,235.0,0.5,0,-10
+wake_ln_minus10_c,255.0,0.5,0,-10
+wake_ln_minus10_d,275.0,0.5,0,-10
+wake_ln_minus10_e,295.0,0.5,0,-10
+wake_ln_minus19_a,315.0,0.5,0,-19
+wake_ln_minus19_b,335.0,0.5,0,-19
+wake_ln_minus19_c,355.0,0.5,0,-19
+wake_ln_minus19_d,375.0,0.5,0,-19
+wake_ln_minus19_e,395.0,0.5,0,-19

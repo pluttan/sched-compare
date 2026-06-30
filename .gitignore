@@ -1,0 +1,34 @@
+# Build artifacts
+sim/sim
+sim/*.o
+*.o
+*.a
+*.out
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archives / dumps
+*.zip
+*.tar.gz
+*.tar.bz2

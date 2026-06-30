@@ -1,0 +1,13 @@
+# bursty: repeated latency-sensitive wakeups to show tail-latency behaviour.
+name,arrival_ms,burst_ms,nice,latency_nice
+burner_0,0.0,300.0,0,0
+burner_1,0.0,300.0,0,0
+wake_1,15.0,0.5,0,-10
+wake_2,45.0,0.5,0,-10
+wake_3,75.0,0.5,0,-10
+wake_4,105.0,0.5,0,-10
+wake_5,135.0,0.5,0,-10
+wake_6,165.0,0.5,0,-10
+wake_7,195.0,0.5,0,-10
+wake_8,225.0,0.5,0,-10
+wake_9,255.0,0.5,0,-10

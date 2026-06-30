@@ -1,0 +1,6 @@
+# fairness: four equal CPU-burners, should get ~25% each under ideal fair scheduling.
+name,arrival_ms,burst_ms,nice,latency_nice
+burner_0,0.0,150.0,0,0
+burner_1,0.0,150.0,0,0
+burner_2,0.0,150.0,0,0
+burner_3,0.0,150.0,0,0
