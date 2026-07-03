@@ -1,14 +1,8 @@
-![Header](header.png)
-
 <div align="center">
 
 # Sched Compare
 
 **CFS vs EEVDF Linux scheduler simulator**
-
-[![License](https://img.shields.io/badge/license-MIT-2C2C2C?style=for-the-badge&labelColor=1E1E1E)](LICENSE)
-[![C++](https://img.shields.io/badge/c++-17-2C2C2C?style=for-the-badge&logo=cplusplus&labelColor=1E1E1E)]()
-[![Python](https://img.shields.io/badge/python-plots-2C2C2C?style=for-the-badge&logo=python&labelColor=1E1E1E)]()
 
 </div>
 
@@ -26,11 +20,34 @@ A tick-based simulator that compares the Linux CFS (Completely Fair Scheduler) a
 
 ## ■ Stack
 
+<div align="center">
+
 | Component | Technology |
 |-----------|------------|
 | Simulator | C++17 |
 | Plotting | Python, matplotlib, pandas, numpy |
 | Build | Make |
+
+</div>
+
+## ■ How It Works
+
+```
+1. Define a task trace in CSV format: each row specifies name, arrival time, burst, nice, and latency-nice.
+2. Build the simulator with Make and run it selecting either the cfs or eevdf algorithm.
+3. The simulator advances in configurable ticks, applies the chosen scheduling policy, and emits events (arrival, start, preempt, finish) to an output CSV.
+4. Run plot_gantt.py to render a side-by-side Gantt timeline of both schedulers.
+5. Run plot_wait_cdf.py to compare cumulative wait-time distributions across traces.
+```
+
+## ■ Screenshots
+
+<div align="center">
+
+![Screenshot](screenshots/main.png)
+*Scheduling timeline and wait-time distribution comparison*
+
+</div>
 
 ## ■ Usage
 
@@ -46,20 +63,3 @@ cd sim && make
 python3 plots/plot_gantt.py --cfs results/cfs_mixed.csv --eevdf results/eevdf_mixed.csv
 python3 plots/plot_wait_cdf.py --results-dir results --traces bursty latency_nice
 ```
-
-## ■ Repository Structure
-
-```
-sim/        C++17 simulator (cfs, eevdf, trace loader, tick runner, Makefile)
-traces/     Input task traces in CSV
-results/    Precomputed per-trace CSV output for cfs and eevdf
-plots/      Python plotting scripts (plot_gantt, plot_wait_cdf, shared style)
-```
-
-## ■ Screenshots
-
-![Screenshot](screenshots/main.png)
-
-## ■ License
-
-MIT © [pluttan](https://github.com/pluttan)
