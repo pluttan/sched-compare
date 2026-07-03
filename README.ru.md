@@ -1,14 +1,8 @@
-![Header](header.png)
-
 <div align="center">
 
 # Sched Compare
 
 **Симулятор планировщиков Linux CFS vs EEVDF**
-
-[![License](https://img.shields.io/badge/license-MIT-2C2C2C?style=for-the-badge&labelColor=1E1E1E)](LICENSE)
-[![C++](https://img.shields.io/badge/c++-17-2C2C2C?style=for-the-badge&logo=cplusplus&labelColor=1E1E1E)]()
-[![Python](https://img.shields.io/badge/python-plots-2C2C2C?style=for-the-badge&logo=python&labelColor=1E1E1E)]()
 
 </div>
 
@@ -36,7 +30,15 @@
 
 </div>
 
-## ■ Как работает
+## ■ Как это работает
+
+```
+1. Опишите трассу задач в формате CSV: каждая строка задаёт имя, время прихода, длительность, nice и latency-nice.
+2. Соберите симулятор через Make и запустите его, выбрав алгоритм cfs или eevdf.
+3. Симулятор продвигается по настраиваемым тикам, применяет выбранную политику планирования и записывает события (arrival, start, preempt, finish) в выходной CSV.
+4. Запустите plot_gantt.py для отрисовки параллельной диаграммы Ганта обоих планировщиков.
+5. Запустите plot_wait_cdf.py для сравнения кумулятивных распределений времени ожидания по трассам.
+```
 
 ## ■ Скриншоты
 
@@ -47,7 +49,7 @@
 
 </div>
 
-## ■ Запуск
+## ■ Использование
 
 ```bash
 # Сборка симулятора
